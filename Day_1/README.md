@@ -8,7 +8,9 @@ The Docker technology uses the Linux kernel and features of the kernel, like Cgr
 *SIMPLY ARCHITECTURE* <br/>
 Dockerfile > Docker Image > Docker Container <br/>
 
-Dockerfile is written down as a text file but without filename extension. This text file contains all the commands that users will use to assemble the line code.
+Dockerfile is written down as a text file but without filename extension. This text file contains all the commands that users will use to assemble the line code. Some basic syntaxs are listed below
+> ```INSTRUCTION``` (must be cappitalized). Each INSTRUCTION will be used for each different command only.
+> ```FROM``` have to be used for starting any Dockerfile for defining what is the root Docker Image.
 
 Docker Image is a file system used to execute code in a Docker container and will be build from a Dockerfile
 > is a read-only template that contains a set of instruction for creating the Docker container that can run on the Docker platform.<br/>
