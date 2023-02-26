@@ -21,3 +21,18 @@ The following hardware prerequisites are required to successfully run WSL 2 on W
 4GB system RAM<br/>
 BIOS-level hardware virtualization support must be enabled in the BIOS settings. For more information, see Virtualization.<br/>
 Download and install the Linux kernel update package.<br/>
+
+```INSTRUCTION TO INSTALL```
+
+After downloading Docker Desktop Installer.exe, run the following command in a terminal to install Docker Desktop:
+```"Docker Desktop Installer.exe" install```
+
+If you’re using PowerShell you should run it as:
+```Start-Process 'Docker Desktop Installer.exe' -Wait install```
+
+If using the Windows Command Prompt:
+``start /w "" "Docker Desktop Installer.exe" install```
+
+
+In case you need some admin setting, below here is all what you need.
+[https://docs.docker.com/desktop/install/windows-install/](https://docs.docker.com/desktop/install/windows-install/)
