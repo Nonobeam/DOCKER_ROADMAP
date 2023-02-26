@@ -13,5 +13,5 @@ Image in Docker is a file system used to execute code in a Docker container
 > is a convenient way to package up application and configured server environment.<br/>
 
 **USAGE**
-```docker images [OPTIONS] [REPOSITORY[:TAG]]
+```docker images [OPTIONS] [REPOSITORY[:TAG]] ```
 
