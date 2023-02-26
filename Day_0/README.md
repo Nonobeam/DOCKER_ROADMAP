@@ -1,4 +1,7 @@
 ***Install Docker Desktop on Windows***
+
+![image](https://user-images.githubusercontent.com/80208064/221410106-db11a989-2fe1-4798-9684-a0897242d43f.png)
+
 This markdown contains information about Docker Desktop for Windows system requirements, download URL, instructions to install and update Docker Desktop for Windows.
 
 ```DOWNLOAD URL```
