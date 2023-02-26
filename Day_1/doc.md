@@ -2,7 +2,11 @@
 
 ![image](https://user-images.githubusercontent.com/80208064/221407416-79b1f6f5-c8e0-4515-8b1e-270f65947df0.png)
 
-Simply, Container is a sandbox where you push your code to it and easily run in any computer.<br/>
+
+*SIMPLY ARCHITECTURE*
+Docker file > Docker Image > Docker Container
+
+Docker Container is a sandbox where you push your code to it and easily run in any computer. It also use as "folder" (or in this case we call it container) storing Docker Images and of cause it is immutable.<br/>
 The Docker technology uses the Linux kernel and features of the kernel, like Cgroups and namespaces, to segregate processes so they can run independently.
 
 > is a runnable instance of an image. You can create, start, stop, move, or delete a container using the DockerAPI or CLI.<br/>
@@ -14,6 +18,5 @@ Image in Docker is a file system used to execute code in a Docker container
 > is a read-only template that contains a set of instruction for creating the Docker container that can run on the Docker platform.<br/>
 > is a convenient way to package up application and configured server environment.<br/>
 
-**USAGE**<br/>
-```docker images [OPTIONS] [REPOSITORY[:TAG]] ```
+
 
