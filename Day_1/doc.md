@@ -1,5 +1,7 @@
 ***In Day_1, we will introduce you to Docker***
 
+![image](https://user-images.githubusercontent.com/80208064/221407416-79b1f6f5-c8e0-4515-8b1e-270f65947df0.png)
+
 Simply, Container is a sandbox where you push your code to it and easily run in any computer.<br/>
 The Docker technology uses the Linux kernel and features of the kernel, like Cgroups and namespaces, to segregate processes so they can run independently.
 
