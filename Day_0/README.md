@@ -29,16 +29,15 @@ Download and install the Linux kernel update package.<br/>
 
 After downloading Docker Desktop Installer.exe, run the following command in a terminal to install Docker Desktop:<br/>
 ```"Docker Desktop Installer.exe" install```
-
+<br/>
+<br/>
 If you’re using PowerShell you should run it as:<br/>
 ```Start-Process 'Docker Desktop Installer.exe' -Wait install```
-
+<br/>
+<br/>
 If using the Windows Command Prompt: <br/>
 ```start /w "" "Docker Desktop Installer.exe" install```
-
-
-
-
-
+<br/>
+<br/>
 In case you need some admin setting, below here is all what you need.
 [https://docs.docker.com/desktop/install/windows-install/](https://docs.docker.com/desktop/install/windows-install/)
