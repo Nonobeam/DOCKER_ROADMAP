@@ -37,5 +37,8 @@ If using the Windows Command Prompt: <br/>
 ```start /w "" "Docker Desktop Installer.exe" install```
 
 
+
+
+
 In case you need some admin setting, below here is all what you need.
 [https://docs.docker.com/desktop/install/windows-install/](https://docs.docker.com/desktop/install/windows-install/)
