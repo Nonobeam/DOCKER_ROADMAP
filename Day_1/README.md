@@ -8,6 +8,9 @@ The Docker technology uses the Linux kernel and features of the kernel, like Cgr
 *SIMPLY ARCHITECTURE* <br/>
 Dockerfile > Docker Image > Docker Container <br/>
 
+*DOCKER LAYER* <br/>
+
+![image](https://static.packt-cdn.com/products/9781788992329/graphics/assets/5c8fd414-799b-43e3-9623-0dcbdabfe7ff.png)
 Dockerfile is written down as a text file but without filename extension. This text file contains all the commands that users will use to assemble the line code. Some basic syntaxs are listed below
 > ```INSTRUCTION``` (must be UPPERCASE to distinguish them from arguments more easily). Each INSTRUCTION will be used for each different command only. <br/>
 > ```FROM``` have to be used for starting any Dockerfile for defining what is the root Docker Image.
