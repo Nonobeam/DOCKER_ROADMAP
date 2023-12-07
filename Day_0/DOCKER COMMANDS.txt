@@ -1,0 +1,35 @@
+ATTRIBUTES:	CONTAINER ID	|	IMAGE	|	COMMAND	|	CREATED		|	STATUS	|	PORTS	|	NAMES	
+
+docker info
+docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
+
+docker ps
+
+(no tag)			: See all RUNNING containers 
+-a				: See all the containers
+
+docker stop [NAMES]: stop the running container
+docker rm [NAMES]: remove the running/stopped container
+docker pull: pull down the image from web
+docker create: create a container for image
+docker images
+
+docker build --tag {name} : name the images
+
+-d				: run in detached mod
+-a=[]           		: Attach to `STDIN`, `STDOUT` and/or `STDERR`
+-t              		: Allocate a pseudo-tty
+--sig-proxy=true	: Proxy all received signals to the process (non-TTY mode only)
+-i              		: Keep STDIN open even if not attached
+
+
+The docker run command must specify an IMAGE to derive the container from. An image developer can define image defaults related to:
+- detached or foreground running
+- container identification
+- network settings
+- runtime constraints on CPU and memory
+With the docker run [OPTIONS] an operator can add to or override the image defaults set by a developer. And, additionally, operators can override nearly all the defaults set by the Docker runtime itself. The operator's ability to override image and Docker runtime defaults is why run has more options than any other docker command.
+
+
+
+DOCKER NETWORK
