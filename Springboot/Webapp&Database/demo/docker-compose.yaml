@@ -1,0 +1,62 @@
+# version: Docker Compose file format version will be used.
+version: "3.8"
+
+# services: individual services in isolated containers. Our application has two services: app (Spring Boot) and mysqldb (MySQL database).
+services:
+  mysqldb:
+    # image: official Docker image
+    image: mysql:5.7
+    container_name: mysqldb
+    # restart: configure the restart policy
+    restart: unless-stopped
+#    # env_file: specify our .env path that we will create later
+#    env_file: .env
+    # environment: provide setting using environment variables
+    environment:
+      - MYSQL_ROOT_PASSWORD=my_secret_password
+      - MYSQL_DATABASE=mysqldb
+      - MYSQL_USER=db_user
+      - MYSQL_PASSWORD=db_user_password
+    # ports: specify ports will be used
+    ports:
+      - "3307:3306"
+    # volumes: map volume folders
+    # volumes: named volumes that keeps our data alive after restart.
+    volumes:
+      - db:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    links:
+      - mysqldb
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mysqldb
+      - PMA_PORT=3306
+    # Mapping the PHPMyAdmin port to localhost:8888
+    ports:
+      - "8888:80"
+  app:
+    depends_on:
+      - mysqldb
+    # Specify the Dockerfile
+    build: .
+    restart: on-failure
+#    env_file: .env
+    ports:
+      - "6868:8080"
+    environment:
+      SPRING_APPLICATION_JSON: '{
+        "spring.datasource.url"  : "jdbc:mysql://mysqldb:3306/mysqldb?useSSL=false",
+        "spring.datasource.username" : "admin",
+        "spring.datasource.password" : "123",
+        "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
+        "spring.jpa.hibernate.ddl-auto" : "update"}'
+    volumes:
+      - .m2:/root/.m2
+    stdin_open: true
+    tty: true
+
+volumes:
+  db:
