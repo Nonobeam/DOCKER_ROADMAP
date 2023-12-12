@@ -1,4 +1,0 @@
-***SOME MISSING CONCEPT IN DOCKER***
-
-When people talk about the isolation of Docker and consider it with the isolation of VMWare (or any Virtual Machine that you are running on your computer). This may lead you to a miss concept that both of them are similar. But the answer is NO!
-Depend on the book "Docker: Up & Running" (by Sean P. Kane & Karl Matthias) and  Operating System Concpts (by Peter Baer Galvin, Greg Gagne, Abraham Silberschatz) the isolation of Docker is quite different due to the way the isolate data.
