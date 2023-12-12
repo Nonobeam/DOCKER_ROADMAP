@@ -1,0 +1,6 @@
+FROM openjdk:20
+
+COPY . /src/
+WORKDIR /src
+ENTRYPOINT [ "src", "Lab_3" ]
+RUN ["java", "-jar", "Lab_3.jar"]
