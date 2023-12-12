@@ -1,0 +1,14 @@
+#Use the openjdk 20 image as base image
+FROM openjdk:20
+
+# Create a new directory under the name "app" using Run
+RUN mkdir /app
+
+#Copy the source file(s) or folder(s) from your machine to your image
+COPY src/main/java/com/helloworld/HelloWorld.java /app
+
+#Create a work directory to execute future commands
+WORKDIR /app
+
+#Run our HelloWorld file
+CMD [ "java", "HelloWorld.java" ]
