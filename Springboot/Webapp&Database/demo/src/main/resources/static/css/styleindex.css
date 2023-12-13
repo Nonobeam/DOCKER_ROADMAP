@@ -1,0 +1,47 @@
+* { /* reset lại margin và padding cho các tag */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    color: brown;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border: 1px solid;
+}
+
+table th,
+table td {
+    padding: 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+table th{
+    vertical-align: middle;
+    width: 20%;
+}
+
+article {
+    text-align: center;
+
+}
+
+button {
+    border: none;
+    background-color: brown;
+    width: 70px;
+    height: fit-content;
+    border-radius: 10px;
+}

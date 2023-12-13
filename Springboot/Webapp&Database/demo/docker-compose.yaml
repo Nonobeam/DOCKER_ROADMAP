@@ -3,7 +3,7 @@ version: "3.8"
 
 # services: individual services in isolated containers. Our application has two services: app (Spring Boot) and mysqldb (MySQL database).
 services:
-  mysqldb:
+  db:
     # image: official Docker image
     image: mysql:5.7
     container_name: mysqldb
@@ -23,13 +23,15 @@ services:
     # volumes: map volume folders
     # volumes: named volumes that keeps our data alive after restart.
     volumes:
+      # map the init file inside /src/main/resources/db with the /docker-entrypoint-initdb.d inside Docker
+      - ./src/main/resources/db:/docker-entrypoint-initdb.d
       - db:/var/lib/mysql
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin
     restart: always
     links:
-      - mysqldb
+      - db
     environment:
       - PMA_ARBITRARY=1
       - PMA_HOST=mysqldb
@@ -39,7 +41,7 @@ services:
       - "8888:80"
   app:
     depends_on:
-      - mysqldb
+      - db
     # Specify the Dockerfile
     build: .
     restart: on-failure
@@ -57,6 +59,6 @@ services:
       - .m2:/root/.m2
     stdin_open: true
     tty: true
-
+#Config your volumes here. Or left it blank and anything will be set to default
 volumes:
   db:
