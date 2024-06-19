@@ -11,7 +11,10 @@ This markdown contains information about Docker Desktop for Windows system requi
 
 ```SYSTEM REQUIREMENTS```
 
-WSL (Windows Subsystem for Linux) 2 backend
+WSL (Windows Subsystem for Linux) 2 backend<br/>
+In case you guys facing problem with install Ubutu to run Docker, I hope these link can help you.<br/>
+[How to verify that WSL 2 is used?](https://superuser.com/questions/1551146/how-to-verify-that-wsl-2-is-used)
+[Install Ubutu](https://stackoverflow.com/questions/73232593/ubuntu-20-04-lts-wslregisterdistribution-failed-with-error-0x800701bc)
 Windows 11 64-bit: Home or Pro version 21H2 or higher, or Enterprise or Education version 21H2 or higher.<br/>
 Windows 10 64-bit: Home or Pro 21H1 (build 19043) or higher, or Enterprise or Education 20H2 (build 19042) or higher.<br/>
 Enable the WSL 2 feature on Windows. For detailed instructions, refer to the Microsoft documentation.<br/>
