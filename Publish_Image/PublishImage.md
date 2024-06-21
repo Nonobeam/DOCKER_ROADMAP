@@ -15,3 +15,9 @@ This repository is intended to host Docker images for the `[repo-name]` project.
 ```
    docker login
 ```
+```
+docker tag <local-image-name>:<tag> <dockerhub-username>/<repo-name>:<tag>
+```
+```
+docker push <dockerhub-username>/<repo-name>:<tag>
+```
